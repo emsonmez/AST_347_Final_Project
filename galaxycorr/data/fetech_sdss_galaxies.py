@@ -36,8 +36,8 @@ def fetch_sdss_galaxies(output_path: str = "galaxycorr/data/sdss_galaxies.fits",
     WHERE class = 'GALAXY'
       AND z > 0 AND z < 0.2
       AND ra BETWEEN {ra_min} AND {ra_max}
-      AND dec BETWEEN {dec_min} AND {dec_max}
-    """
+      AND dec BETWEEN {dec_min} AND {dec_max}"""
+    
     print(f"Querying SDSS DR{dr}...")
     try:
         result = SDSS.query_sql(query, data_release=dr)
